@@ -2,15 +2,18 @@ export const WwwHeiseDeExtractor = {
   domain: 'www.heise.de',
 
   title: {
-    selectors: ['h1.article__heading'],
+    selectors: ['header .a-article-header__title', 'header .article__heading'],
   },
 
   author: {
-    selectors: ['header .publish-info__author'],
+    selectors: ['header .a-creator__name', 'header .publish-info__author'],
   },
 
   date_published: {
-    selectors: [['header .publish-info__date', 'datetime']],
+    selectors: [
+      ['header .meta-datetime', 'datetime'],
+      ['header .publish-info__date', 'datetime'],
+    ],
   },
 
   dek: {
@@ -22,7 +25,7 @@ export const WwwHeiseDeExtractor = {
   },
 
   excerpt: {
-    selectors: ['header .article-content__lead'],
+    selectors: ['.a-article-header__lead', 'header .article-content__lead'],
   },
 
   next_page_url: {
