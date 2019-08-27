@@ -1,0 +1,1256 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+<html lang="de">
+  <head>
+    <title>
+        Barrierefreiheit: Stolpersteine bei mobilen Anwendungen &#xFC;berwinden, Teil 2 |
+        heise Developer
+    </title>
+    
+
+
+
+
+
+
+<meta charset="utf-8">
+<meta name="publisher" value="Heise Medien">
+
+
+
+  <meta name="viewport" value="width=1175">
+
+
+  <meta http-equiv="x-ua-compatible" value="ie=edge">
+
+<link rel="preload" href="https://www.heise.de/fonts/source-sans-pro-subset/sourcesanspro-regular-webfont.woff2" as="font" type="font/woff2" crossorigin="">
+<link rel="preload" href="https://www.heise.de/fonts/source-sans-pro-subset/sourcesanspro-semibold-webfont.woff2" as="font" type="font/woff2" crossorigin="">
+
+<link rel="dns-prefetch" href="https://heise.cloudimg.io/">
+<link rel="dns-prefetch" href="https://1.f.ix.de/">
+<link rel="dns-prefetch" href="https://m.heise.de/">
+<link rel="dns-prefetch" href="https://de.ioam.de/">
+<link rel="dns-prefetch" href="https://responder.wt.heise.de/">
+<link rel="dns-prefetch" href="https://securepubads.g.doubleclick.net/">
+<link rel="dns-prefetch" href="https://prophet.heise.de/">
+
+<link rel="preconnect" href="https://heise.cloudimg.io/">
+<link rel="preconnect" href="https://1.f.ix.de/">
+<link rel="preconnect" href="https://de.ioam.de/">
+<link rel="preconnect" href="https://responder.wt.heise.de/">
+<link rel="preconnect" href="https://securepubads.g.doubleclick.net/">
+<link rel="preconnect" href="https://prophet.heise.de/">
+
+
+  <link rel="canonical" href="https://www.heise.de/developer/artikel/Barrierefreiheit-Stolpersteine-bei-mobilen-Anwendungen-ueberwinden-Teil-2-4500303.html">
+
+
+  <link rel="alternate" media="only screen and (max-width: 640px)" href="https://m.heise.de/developer/artikel/Barrierefreiheit-Stolpersteine-bei-mobilen-Anwendungen-ueberwinden-Teil-2-4500303.html" id="mobil_variante">
+
+
+
+  <link rel="next prefetch" title="Naechste Seite" href="https://www.heise.de/developer/artikel/Barrierefreiheit-Stolpersteine-bei-mobilen-Anwendungen-ueberwinden-Teil-2-4500303.html?seite=2">
+
+
+
+
+
+
+
+  <meta name="date" value="2019-08-27T10:12:00+02:00">
+
+
+  <meta name="author" value="Roman Zimmer, Alexander Huber, Martin Kinting">
+
+
+  <meta name="title" value="Barrierefreiheit: Stolpersteine bei mobilen Anwendungen &#xFC;berwinden, Teil 2">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <meta name="description" value="Der barrierefreie Zugang zu Apps ist wichtig. Allgemeine Designrichtlinien und konkrete Ma&#xDF;nahmen helfen bei der Umsetzung.">
+
+
+  <meta name="keywords" value="Android, Barrierefreiheit, Mobile Development">
+
+
+  <meta name="DC.identifier" value="https://heise.de/-4500303">
+
+
+
+  <meta value="Der barrierefreie Zugang zu Apps ist wichtig. Allgemeine Designrichtlinien und konkrete Ma&#xDF;nahmen helfen bei der Umsetzung." name="og:description">
+  <meta value="https://heise.cloudimg.io/bound/1200x1200/q85.png-lossy-85.webp-lossy-85.foil1/_www-heise-de_/developer/imgs/06/2/7/3/3/6/8/1/accessibility-shutterstock-381a4b0a8c55c2f0.jpeg" name="og:image">
+  <meta value="de_DE" name="og:locale">
+  <meta value="Developer" name="og:site_name">
+  <meta value="Barrierefreiheit: Stolpersteine bei mobilen Anwendungen &#xFC;berwinden, Teil 2" name="og:title">
+  <meta value="website" name="og:type">
+  <meta value="https://www.heise.de/developer/artikel/Barrierefreiheit-Stolpersteine-bei-mobilen-Anwendungen-ueberwinden-Teil-2-4500303.html" name="og:url">
+  <meta value="summary_large_image" name="twitter:card">
+  <meta value="Der barrierefreie Zugang zu Apps ist wichtig. Allgemeine Designrichtlinien und konkrete Ma&#xDF;nahmen helfen bei der Umsetzung." name="twitter:description">
+  <meta value="https://heise.cloudimg.io/bound/1200x1200/q85.png-lossy-85.webp-lossy-85.foil1/_www-heise-de_/developer/imgs/06/2/7/3/3/6/8/1/accessibility-shutterstock-381a4b0a8c55c2f0.jpeg" name="twitter:image">
+  <meta value="@heisedc" name="twitter:site">
+  <meta value="Barrierefreiheit: Stolpersteine bei mobilen Anwendungen &#xFC;berwinden, Teil 2" name="twitter:title">
+
+
+
+
+
+<link rel="home" type="text/html" title="Startseite" href="https://www.heise.de/developer/">
+<link rel="copyright" title="Copyright" href="https://www.heise.de/developer/impressum.html">
+<meta name="generator" value="InterRed V17.4.0, http://www.interred.de/, InterRed GmbH">
+
+<meta data-embetty-server="https://api.heise.de/svc/embetty">
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+<link href="https://www.heise.de/assets/akwa/v15/css/akwa.css?aafa9852854cd1221e39" rel="stylesheet" type="text/css">
+    <link href="https://www.heise.de/assets/heise/heise/css/heise.css?382734921851777257ee" rel="stylesheet" type="text/css">
+
+
+    <link href="https://www.heise.de/favicon_developer.ico" rel="shortcut icon">
+    <link rel="apple-touch-icon" sizes="60x60" href="https://www.heise.de/developer/icons/apple-touch-icon-60.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="https://www.heise.de/developer/icons/apple-touch-icon-120.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="https://www.heise.de/developer/icons/apple-touch-icon-76.png">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="https://www.heise.de/developer/icons/apple-touch-icon-152.png">
+    <meta name="application-name" value="Informationen f&#xFC;r Entwickler">
+    <meta name="msapplication-tooltip" value="heise Developer">
+    <meta name="msapplication-starturl" value="https://www.heise.de/developer/">
+    <meta name="msapplication-TileColor" value="#AF2858">
+    <meta name="msapplication-square70x70logo" value="/developer/icons/windows_tiny.png">
+    <meta name="msapplication-square150x150logo" value="/developer/icons/windows_square.png">
+    <meta name="msapplication-wide310x150logo" value="/developer/icons/windows_wide.png">
+    <meta name="msapplication-square310x310logo" value="/developer/icons/windows_large.png">
+
+    <link rel="author" title="Kontakt" href="https://www.heise.de/developer/kontakt/">
+    <link rel="search" title="Suche" href="https://www.heise.de/developer/suche/">
+
+    <link rel="alternate" type="application/atom+xml" title="Aktuelle News und Hinterg&#xFC;nde von heise Developer" href="https://www.heise.de/developer/rss/news-atom.xml">
+    <link rel="alternate" type="application/rss+xml" title="Aktuelle News und Hinterg&#xFC;nde von heise Developer" href="https://www.heise.de/developer/rss/news.rdf">
+
+    <link href="https://www.heise.de/assets/heise/developer/css/developer.css?274d8b6d2ffc3b583061" rel="stylesheet" type="text/css">
+    
+
+    
+
+
+
+
+  </head>
+  <body class="developer" id="pre-akwa">
+
+  
+
+<a-analytics type="webtrekk">
+    
+  </a-analytics>
+
+
+<a-analytics type="chartbeat"></a-analytics>
+
+<a-analytics type="medianest">
+  
+</a-analytics>
+
+
+
+  <div class="topnavigation">
+    <header role="banner" class="topnavigation__header">
+
+      <div class="topnavigation__content">
+        <figure class="topnavigation__logo">
+
+          <a href="https://www.heise.de/" title="heise online" name="topnavi.ho.news" class="topnavigation__logo-link
+          topnavigation__item">
+            <svg preserveaspectratio="xMinYMin" xmlns="http://www.w3.org/2000/svg" viewbox="0 478.9 595.2 116.7" class="heise-online-logo topnavigation__heiseonline-logo">
+  <path d="M96.8 557l-4.2-3.6c5.1-6.3 8.4-15.4 8.4-23.4 0-24.4-19.1-40.3-42.7-40.3-31.6 0-42.7 25-42.7 52.9 0 24.6 18.2 45.1 43.3 45.1 13.2 0 24.9-3.9 35.7-11.3 2.1-1.4 3.9-3.1 5.8-4.9l2.4 3.6c-10.1 12.4-27.3 20.5-43.3 20.5-32.6 0-59.5-23.7-59.5-57.2 0-33.9 24.8-59.5 58.9-59.5 28.3 0 51.7 17.8 51.7 47.5 0 10.9-5.8 23.1-13.8 30.6zm-30.1-40.6l-18.9 43.1c-1.6 3.6-3.9 7.8-8.6 7.8-3.3 0-5.9-2.4-5.9-5.8 0-2.7 1.3-5.1 2.3-7.3l20.5-46.7c1.6-3.5 3.5-6.2 7.6-6.2 3.3 0 5.8 2.4 5.8 5.8 0 3.2-1.4 6.4-2.8 9.3zm15.1 26.2l-7.6 16.9c-1.7 3.6-4.1 7.7-8.6 7.7-3.3 0-5.8-2.4-5.8-5.8 0-2.5 1.2-4.9 2.3-7.2l9.2-20.5c1.6-3.3 3.5-6.2 7.6-6.2 3.3 0 5.8 2.4 5.8 5.8-.2 3.3-1.6 6.4-2.9 9.3zM140 502.6h10.9v25.6h.1c1.3-2 3.2-3.8 5.4-4.9 2.2-1.3 4.7-1.9 7.4-1.9 7.3 0 15 4.8 15 18.6v25.3h-10.9v-24.1c0-6.3-2.3-10.9-8.3-10.9-4.2 0-7.2 2.8-8.4 6.1-.4.9-.4 2-.4 3.3v25.7h-10.9l.1-62.8zm58.1 44.2c.3 7.7 6.3 11.1 13.2 11.1 5.1 0 8.6-.7 11.9-1.9l1.6 7.5c-3.7 1.5-8.9 2.8-15 2.8-13.9 0-22.1-8.6-22.1-21.8 0-11.9 7.2-23.1 21-23.1 14 0 18.5 11.5 18.5 20.9 0 2-.1 3.6-.4 4.6l-28.7-.1zm18.9-7.6c.1-3.9-1.7-10.5-8.9-10.5-6.7 0-9.5 6.1-10 10.5H217zm32.3-28.9c0 3.3-2.4 5.8-6.2 5.8-3.6 0-6-2.5-6-5.8s2.5-5.9 6.1-5.9c3.7 0 5.9 2.5 6.1 5.9zm-11.6 54.9v-42.9h10.9v42.9h-10.9zm23.9-9.9c2.5 1.5 7.1 3.1 11 3.1 4.8 0 6.8-1.9 6.8-4.8s-1.8-4.4-7.1-6.3c-8.4-2.9-11.9-7.5-11.8-12.5 0-7.6 6.3-13.5 16.2-13.5 4.8 0 8.9 1.3 11.4 2.5l-2.2 7.7c-1.9-1-5.3-2.5-9.1-2.5-3.9 0-6 1.9-6 4.5 0 2.8 2 4.1 7.5 6 7.7 2.8 11.4 6.8 11.5 13.2 0 7.7-6.1 13.5-17.5 13.5-5.2 0-9.9-1.3-13-3.1l2.3-7.8zm46.7-8.5c.3 7.7 6.3 11.1 13.2 11.1 5.1 0 8.6-.7 11.9-1.9l1.6 7.5c-3.7 1.5-8.9 2.8-15 2.8-14-.1-22.2-8.7-22.2-21.8 0-11.9 7.2-23.1 21-23.1 14 0 18.5 11.5 18.5 20.9 0 2-.1 3.6-.4 4.6l-28.6-.1zm18.9-7.6c.1-3.9-1.7-10.5-8.9-10.5-6.7 0-9.5 6.1-10 10.5h18.9zm78 4.2c0 15.8-11.1 22.8-22 22.8-12.2-.1-21.5-8.4-21.5-22.2 0-14.1 9.3-22.8 22.2-22.8 12.7.1 21.3 9.1 21.3 22.2zm-32.4.4c0 8.3 4.1 14.5 10.7 14.5 6.2 0 10.5-6.1 10.5-14.7 0-6.7-3-14.4-10.4-14.4-7.7.1-10.8 7.5-10.8 14.6zm41.3-8.7c0-4.9-.1-9.1-.4-12.8h9.5l.5 6.4h.3c1.9-3.3 6.5-7.4 13.7-7.4 7.5 0 15.3 4.8 15.3 18.5v25.5h-10.9V541c0-6.2-2.3-10.9-8.2-10.9-4.3 0-7.3 3.1-8.5 6.3-.4 1-.4 2.3-.4 3.5v25.2h-10.9v-30zm50.4-32.5h10.9v62.7h-10.9v-62.7zm34.3 7.7c0 3.3-2.4 5.8-6.2 5.8-3.6 0-6-2.5-6-5.8s2.5-5.9 6.1-5.9c3.7 0 6 2.5 6.1 5.9zm-11.6 54.9v-42.9h10.9v42.9h-10.9zm22.6-30.1c0-4.9-.1-9.1-.4-12.8h9.5l.5 6.4h.3c1.9-3.3 6.5-7.4 13.7-7.4 7.5 0 15.3 4.8 15.3 18.5v25.5h-10.9V541c0-6.2-2.3-10.9-8.2-10.9-4.3 0-7.3 3.1-8.5 6.3-.4 1-.4 2.3-.4 3.5v25.2h-10.9v-30zm56.3 11.7c.3 7.7 6.3 11.1 13.2 11.1 5.1 0 8.6-.7 11.9-1.9l1.6 7.5c-3.7 1.5-8.9 2.8-15 2.8-13.9 0-22.1-8.6-22.1-21.8 0-11.9 7.2-23.1 21-23.1 14 0 18.5 11.5 18.5 20.9 0 2-.1 3.6-.4 4.6l-28.7-.1zm18.9-7.6c.1-3.9-1.7-10.5-8.9-10.5-6.7 0-9.5 6.1-10 10.5H585z"/></svg>
+
+          </a>
+
+          <a href="https://www.heise.de/plus/" title="heise+ - Immer mehr Wissen." name="topnavi.ho.heiseplus" class="topnavigation__logo-link
+            topnavigation__item">
+              <svg class="heiseplus-logo topnavigation__heiseplus-logo" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 192 60">
+  <path fill="#0056a4" d="M132 0h60v60h-60z"/>
+  <path d="M0 0h128v60H0z"/>
+  <path d="M13.64 46V12.11h5.52v8.74L19 25.41a19.24 19.24 0 0 1 3.29-2.47 8.11 8.11 0 0 1 4.25-1.08q3.79 0 5.52 2.42t1.73 6.94V46h-5.55V31.94a7.4 7.4 0 0 0-.86-4.13 3.25 3.25 0 0 0-2.83-1.2 5 5 0 0 0-2.71.74 17.58 17.58 0 0 0-2.66 2.18V46zm36.87.58a12.24 12.24 0 0 1-4.51-.84 10.74 10.74 0 0 1-6.17-6.28 14.33 14.33 0 0 1-.89-5.21 13.9 13.9 0 0 1 .91-5.18 12.06 12.06 0 0 1 2.42-3.89 10.79 10.79 0 0 1 3.48-2.45 9.87 9.87 0 0 1 4-.86 10.12 10.12 0 0 1 4.22.82A8.22 8.22 0 0 1 57 25a10.16 10.16 0 0 1 1.85 3.55 15.42 15.42 0 0 1 .62 4.51 15 15 0 0 1-.07 1.54 9.34 9.34 0 0 1-.17 1.15h-15a7.62 7.62 0 0 0 2.23 4.87 6.73 6.73 0 0 0 4.73 1.7 8.58 8.58 0 0 0 2.86-.46 13.4 13.4 0 0 0 2.62-1.27L58.58 44a16.86 16.86 0 0 1-3.74 1.82 13.16 13.16 0 0 1-4.33.76zM44.22 32h10.46a7 7 0 0 0-1.18-4.3 4.25 4.25 0 0 0-3.62-1.56 5.25 5.25 0 0 0-3.7 1.49A7.13 7.13 0 0 0 44.22 32zm20.54 14V22.43h5.52V46zm2.79-27.7a3.55 3.55 0 0 1-2.45-.86 2.9 2.9 0 0 1-1-2.26 3 3 0 0 1 1-2.28 3.82 3.82 0 0 1 4.9 0 3 3 0 0 1 1 2.28 2.9 2.9 0 0 1-1 2.26 3.51 3.51 0 0 1-2.45.86zm16.37 28.28a12.92 12.92 0 0 1-4.82-.94 15.73 15.73 0 0 1-4.1-2.33l2.59-3.55a15 15 0 0 0 3.14 1.94 8.28 8.28 0 0 0 3.38.7 4.23 4.23 0 0 0 2.83-.79 2.58 2.58 0 0 0 .91-2 2 2 0 0 0-.43-1.27 4 4 0 0 0-1.15-1 11.8 11.8 0 0 0-1.63-.79l-1.82-.74c-.77-.29-1.55-.62-2.35-1a9.61 9.61 0 0 1-2.14-1.39 7.07 7.07 0 0 1-1.54-1.9 5.22 5.22 0 0 1-.6-2.57 6.4 6.4 0 0 1 2.3-5.09 9.38 9.38 0 0 1 6.29-2 11 11 0 0 1 4.42.86 16.51 16.51 0 0 1 3.41 2l-2.54 3.36a12.52 12.52 0 0 0-2.52-1.46 6.6 6.6 0 0 0-2.66-.62 3.92 3.92 0 0 0-2.62.74 2.37 2.37 0 0 0-.84 1.85 1.87 1.87 0 0 0 .41 1.22 3.73 3.73 0 0 0 1.08.89 10.35 10.35 0 0 0 1.56.72c.59.22 1.21.45 1.85.67.8.29 1.6.62 2.4 1a9.56 9.56 0 0 1 2.18 1.37 6.17 6.17 0 0 1 1.58 2 6.1 6.1 0 0 1 .6 2.81 6.85 6.85 0 0 1-.6 2.86 6.5 6.5 0 0 1-1.75 2.3A8.58 8.58 0 0 1 87.85 46a12.5 12.5 0 0 1-3.93.58zm24.19 0a12.24 12.24 0 0 1-4.56-.84 10.74 10.74 0 0 1-6.17-6.28 14.33 14.33 0 0 1-.89-5.21 13.9 13.9 0 0 1 .91-5.18 12.06 12.06 0 0 1 2.42-3.89 10.79 10.79 0 0 1 3.48-2.45 9.87 9.87 0 0 1 4-.86 10.12 10.12 0 0 1 4.22.82 8.22 8.22 0 0 1 3 2.3 10.16 10.16 0 0 1 1.85 3.55 15.37 15.37 0 0 1 .62 4.51 15 15 0 0 1-.07 1.54 9.34 9.34 0 0 1-.17 1.15h-15a7.62 7.62 0 0 0 2.23 4.87 6.68 6.68 0 0 0 4.73 1.7 8.58 8.58 0 0 0 2.86-.46 13.4 13.4 0 0 0 2.62-1.27l1.97 3.42a16.86 16.86 0 0 1-3.74 1.82 13 13 0 0 1-4.31.76zM101.82 32h10.46a7 7 0 0 0-1.18-4.3 4.25 4.25 0 0 0-3.62-1.56 5.25 5.25 0 0 0-3.7 1.49 7.13 7.13 0 0 0-1.96 4.37zM158.35 33.5h-12.77a3.58 3.58 0 0 1 0-7.16h12.77V13.58a3.58 3.58 0 1 1 7.16 0v32.7a3.58 3.58 0 1 1-7.16 0zM170.5 26h7a3.5 3.5 0 0 1 0 7h-7a3.5 3.5 0 0 1 0-7z" fill="#fff" fill-rule="evenodd"/>
+</svg>
+
+          </a>
+
+        </figure>
+
+        <div class="topnavigation__actions">
+
+          <section class="topnavigation-login
+topnavigation__item
+ topnavigation__item">
+  <svg class="login-icon topnavigation-login__icon" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24">
+  <path id="user-round-outline" d="M12,0A12,12,0,1,0,24,12,12,12,0,0,0,12,0Zm0,2a10,10,0,0,1,8.21,15.7l-.05-.08a2.74,2.74,0,0,0-.3-.33,5.78,5.78,0,0,0-.48-.33c-.14-.07-.92-.43-1.06-.47h0c-.15-.06-1.59-.58-1.66-.62s-.8-.31-1-.4a4.8,4.8,0,0,0-.76-.23l-.36-.74a2.15,2.15,0,0,0-.3-.43l-.12-.12a.8.8,0,0,1,.08-.17,4.91,4.91,0,0,0,.27-.62c0-.13.29-1.08.29-1.08a.72.72,0,0,0,.27-.13.92.92,0,0,0,.18-.36.69.69,0,0,0,.09-.18,1.5,1.5,0,0,0,.08-.27s0-.22.17-.8-.1-.59-.1-.59,0-.1,0-.15a2.35,2.35,0,0,0,.06-.34c0-.08.13-.67.15-.89a3.56,3.56,0,0,0-.1-.7,2.38,2.38,0,0,1,0-.33,1.94,1.94,0,0,0-.25-.53c-.08-.12-.15-.3-.18-.34A.53.53,0,0,1,15,6.2c0-.11-.15-.19-.21-.25s-.12-.09-.13-.13.07,0,.12,0L15,6l0,0a1.63,1.63,0,0,0-.17-.24.94.94,0,0,0-.36-.18l-.13-.07a.69.69,0,0,1-.16-.12c-.08-.08-.12-.07-.19-.13a2.36,2.36,0,0,0-.49-.26,2.52,2.52,0,0,0-.58-.08l-.38-.05a.3.3,0,0,1-.15-.07s0-.07.19-.13.44.09.44.09l-.13-.1a.63.63,0,0,0-.28,0,.79.79,0,0,0-.38.17l-.07,0a.35.35,0,0,1,0-.12.34.34,0,0,1,.23-.17.9.9,0,0,1,.36,0s0,0-.16-.07a.73.73,0,0,0-.45.06.37.37,0,0,0-.21.21s-.06,0-.08,0,0-.08,0-.13.18-.1.18-.1h-.14c-.07,0-.18.25-.18.25a3.35,3.35,0,0,0-.37-.11,1.32,1.32,0,0,0-.52,0,.58.58,0,0,0-.36.26s.08,0,.09-.08.06,0,.29,0a.32.32,0,0,1,.35.16s-.17,0-.3,0a.44.44,0,0,0-.25,0,1.43,1.43,0,0,1-.3.1,2.82,2.82,0,0,0-.61.35L10,5.18l.18-.08h0a.45.45,0,0,1,.14,0s0,.08-.07.1A2,2,0,0,1,10,5.3c-.06,0-.14.12-.18.15s-.24.09-.34.14a1.64,1.64,0,0,0-.3.3l.18-.16a.73.73,0,0,1,.22-.11.28.28,0,0,1,0,.09s-.13.13-.15.2-.16.16-.2.18l-.27.21a1.68,1.68,0,0,1-.3.15,3,3,0,0,0-.36.35.44.44,0,0,0,.12-.08.48.48,0,0,1,.19,0,4.9,4.9,0,0,0-.37.53,1.79,1.79,0,0,0-.09,1.08l.06,0a2.9,2.9,0,0,1,0,.29,5,5,0,0,0,.1.69.29.29,0,0,1,0,.2.91.91,0,0,0,.08.17l-.06.09a.48.48,0,0,0-.11.24,1.41,1.41,0,0,0,.1.6,2.48,2.48,0,0,1,.07.3,3.82,3.82,0,0,0,.11.38c0,.05.13.38.23.61s.45.27.45.27a2.86,2.86,0,0,0,0,.33c0,.07.13.78.19,1a3,3,0,0,0,.47.72l0,.06a1.94,1.94,0,0,1-.13.18c-.05.06-.25.27-.36.41s-.41.56-.41.56-.41.16-.62.26S7.5,16,7.41,16a3.25,3.25,0,0,1-.56.15c-.23,0-.65.12-.71.14s-.36.14-.5.18-1,.38-1.09.45a4.48,4.48,0,0,0-.48.33,1.7,1.7,0,0,0-.3.33s0,0,0,0A10,10,0,0,1,12,2Z"/>
+</svg>
+
+  <a-login label="" class="topnavigation-login__link"></a-login>
+</section>
+
+
+          
+
+
+
+
+          <a href="https://www.heise.de/developer/artikel/Barrierefreiheit-Stolpersteine-bei-mobilen-Anwendungen-ueberwinden-Teil-2-4500303.html#topnavigation__sub" class="topnavigation-menu js-topnavigation-menu" aria-controls="topnavigation__sub">
+            Men&#xFC;
+            <svg id="icon-circle-caret-outline" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" class="menu-icon topnavigation-menu__icon js-topnavigation-menu__icon">
+  <path id="circle-caret-outline" d="M12,0A12,12,0,1,0,24,12,12,12,0,0,0,12,0Zm0,22A10,10,0,1,1,22,12,10,10,0,0,1,12,22Zm0-6L7,10H17Z"/>
+</svg>
+
+          </a>
+        </div>
+      </div>
+
+      <div id="topnavigation__sub" class="topnavigation__sub js-topnavigation__sub">
+        
+<nav class="sitemap topnavigation__sitemap" aria-label="Sitemap">
+
+  
+
+<a-collapse class="sitemap-group " has-indicator="">
+    <header class="sitemap-group__header" data-collapse-trigger="">
+      IT News
+    </header>
+
+    <div class="sitemap-group__content" data-collapse-target="">
+      <ul class="sitemap-group__items">
+        
+          <li class="sitemap-group__item sitemap-group__item--newsticker">
+            <a href="https://www.heise.de/newsticker/" title="heise Developer &#x2013; Informationen f&#xFC;r Entwickler" name="topnavi.ho.sitemap.newsticker" class="sitemap-group__link ">
+              Newsticker
+            </a>
+          </li>
+        
+          <li class="sitemap-group__item sitemap-group__item--developer">
+            <a href="https://www.heise.de/developer/" title="heise Developer &#x2013; Informationen f&#xFC;r Entwickler" name="topnavi.ho.sitemap.developer" class="sitemap-group__link ">
+              heise Developer
+            </a>
+          </li>
+        
+          <li class="sitemap-group__item sitemap-group__item--netze">
+            <a href="https://www.heise.de/thema/netze/" title="Themenseite Netze" name="topnavi.ho.sitemap.netze" class="sitemap-group__link ">
+              heise Netze
+            </a>
+          </li>
+        
+          <li class="sitemap-group__item sitemap-group__item--open">
+            <a href="https://www.heise.de/thema/linux-und-open-source/" title="Themenseite Linux und Open Source" name="topnavi.ho.sitemap.open" class="sitemap-group__link ">
+              heise Open Source
+            </a>
+          </li>
+        
+          <li class="sitemap-group__item sitemap-group__item--security">
+            <a href="https://www.heise.de/security/" title="heise Security &#x2013; News, Dienste und Foren zum Thema Computer-Sicherheit" name="topnavi.ho.sitemap.security" class="sitemap-group__link ">
+              heise Security
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </a-collapse>
+
+
+  
+
+<a-collapse class="sitemap-group " has-indicator="">
+    <header class="sitemap-group__header" data-collapse-trigger="">
+      Online-Magazine
+    </header>
+
+    <div class="sitemap-group__content" data-collapse-target="">
+      <ul class="sitemap-group__items">
+        
+          <li class="sitemap-group__item sitemap-group__item--heiseplus">
+            <a href="https://www.heise.de/plus/" title="heise+ - Immer mehr Wissen." name="topnavi.ho.sitemap.heiseplus" class="sitemap-group__link sitemap-group__link--heiseplus">
+              heise<span class="sitemap_group__heiseplus-icon">+</span>
+            </a>
+          </li>
+        
+          <li class="sitemap-group__item sitemap-group__item--tp">
+            <a href="https://www.heise.de/tp/" title="Telepolis" name="topnavi.ho.sitemap.tp" class="sitemap-group__link ">
+              Telepolis
+            </a>
+          </li>
+        
+          <li class="sitemap-group__item sitemap-group__item--autos">
+            <a href="https://www.heise.de/autos/" title="heise Autos &#x2013; News, Tests, Technik, Service rund ums Auto" name="topnavi.ho.sitemap.autos" class="sitemap-group__link ">
+              heise Autos
+            </a>
+          </li>
+        
+          <li class="sitemap-group__item sitemap-group__item--techstage">
+            <a href="https://www.techstage.de/" title="TechStage &#x2013; News, Tests &amp; Praxis zu Smartphones und Tablets mit Android, iOS, Windows Phone &amp; Co." name="topnavi.ho.sitemap.techstage" class="sitemap-group__link ">
+              TechStage
+            </a>
+          </li>
+        
+          <li class="sitemap-group__item sitemap-group__item--tipps-tricks">
+            <a href="https://www.heise.de/tipps-tricks/" title="tipps+tricks" name="topnavi.ho.sitemap.tipps-tricks" class="sitemap-group__link ">
+              tipps+tricks
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </a-collapse>
+
+
+  
+
+<a-collapse class="sitemap-group " has-indicator="">
+    <header class="sitemap-group__header" data-collapse-trigger="">
+      Magazine
+    </header>
+
+    <div class="sitemap-group__content" data-collapse-target="">
+      <ul class="sitemap-group__items">
+        
+          <li class="sitemap-group__item sitemap-group__item--ct">
+            <a href="https://www.heise.de/ct/" title="c&apos;t &#x2013; Magazin f&#xFC;r Computertechnik" name="topnavi.ho.sitemap.ct" class="sitemap-group__link ">
+              c&apos;t
+            </a>
+          </li>
+        
+          <li class="sitemap-group__item sitemap-group__item--ix">
+            <a href="https://www.heise.de/ix/" title="iX &#x2013; Magazin f&#xFC;r professionelle Informationstechnik" name="topnavi.ho.sitemap.ix" class="sitemap-group__link ">
+              iX
+            </a>
+          </li>
+        
+          <li class="sitemap-group__item sitemap-group__item--tr">
+            <a href="https://www.heise.de/tr/" title="Technology Review &#x2013; Das M.I.T.-Magazin f&#xFC;r Innovation" name="topnavi.ho.sitemap.tr" class="sitemap-group__link ">
+              Technology Review
+            </a>
+          </li>
+        
+          <li class="sitemap-group__item sitemap-group__item--ct-fotografie">
+            <a href="https://www.heise.de/foto/" title="c&apos;t Fotografie" name="topnavi.ho.sitemap.ct-fotografie" class="sitemap-group__link ">
+              c&apos;t Fotografie
+            </a>
+          </li>
+        
+          <li class="sitemap-group__item sitemap-group__item--mac-and-i">
+            <a href="https://www.heise.de/mac-and-i/" title="Mac &amp; i &#x2013; Nachrichten, Tests, Tipps und Meinungen rund um Apple" name="topnavi.ho.sitemap.mac-and-i" class="sitemap-group__link ">
+              Mac &amp; i
+            </a>
+          </li>
+        
+          <li class="sitemap-group__item sitemap-group__item--make">
+            <a href="https://www.heise.de/make/" title="Make &#x2013; Kreativ mit Technik" name="topnavi.ho.sitemap.make" class="sitemap-group__link ">
+              Make
+            </a>
+          </li>
+        
+          <li class="sitemap-group__item sitemap-group__item--select">
+            <a href="https://www.heise.de/select/" title="Magazine im Browser lesen" name="topnavi.ho.sitemap.select" class="sitemap-group__link sitemap-group__link--magazine">
+              im Browser lesen
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </a-collapse>
+
+
+  
+
+<a-collapse class="sitemap-group " has-indicator="">
+    <header class="sitemap-group__header" data-collapse-trigger="">
+      Services
+    </header>
+
+    <div class="sitemap-group__content" data-collapse-target="">
+      <ul class="sitemap-group__items">
+        
+          <li class="sitemap-group__item sitemap-group__item--jobs">
+            <a href="https://www.heise.de/jobs/" title="heise jobs &#x2013; Jobb&#xF6;rse f&#xFC;r qualifizierte Fach- und F&#xFC;hrungskr&#xE4;fte aus der IT-Branche" name="topnavi.ho.sitemap.jobs" class="sitemap-group__link ">
+              Stellenmarkt heise Jobs
+            </a>
+          </li>
+        
+          <li class="sitemap-group__item sitemap-group__item--download">
+            <a href="https://www.heise.de/download/" title="heise Download &#x2013; Software zum Download fuer Windows, Mac, Linux, iPhone, Symbian, Android" name="topnavi.ho.sitemap.download" class="sitemap-group__link ">
+              heise Download
+            </a>
+          </li>
+        
+          <li class="sitemap-group__item sitemap-group__item--produkte">
+            <a href="https://www.heise.de/preisvergleich/" title="Preisvergleich &#x2013; G&#xFC;nstige Preise, Meinungen und Bewertungen zu vielen Produkten" name="topnavi.ho.sitemap.produkte" class="sitemap-group__link ">
+              Preisvergleich
+            </a>
+          </li>
+        
+          <li class="sitemap-group__item sitemap-group__item--whitepapers">
+            <a href="https://business-services.heise.de/" title="heise Business Services &#x2013; Produkte und L&#xF6;sungen namhafter IT-Hersteller" name="topnavi.ho.sitemap.whitepapers" class="sitemap-group__link ">
+              Whitepaper/Webcasts
+            </a>
+          </li>
+        
+          <li class="sitemap-group__item sitemap-group__item--tarifrechner">
+            <a href="https://www.heise.de/tarifrechner/" title="Tarifrechner &#x2013; DSL, Mobiles Internet, Handy, Telefon, Strom, Gas" name="topnavi.ho.sitemap.tarifrechner" class="sitemap-group__link ">
+              Tarifrechner
+            </a>
+          </li>
+        
+          <li class="sitemap-group__item sitemap-group__item--tools">
+            <a href="https://www.heise.de/tools/" title="Netzwerk-Tools" name="topnavi.ho.sitemap.tools" class="sitemap-group__link ">
+              Netzwerk-Tools
+            </a>
+          </li>
+        
+          <li class="sitemap-group__item sitemap-group__item--spiele">
+            <a href="https://spiele.heise.de/" title="Spielen bei Heise" name="topnavi.ho.sitemap.spiele" class="sitemap-group__link ">
+              Spielen bei Heise
+            </a>
+          </li>
+        
+          <li class="sitemap-group__item sitemap-group__item--loseblattwerke">
+            <a href="https://www.heise.de/loseblattwerke/" title="Loseblattwerke" name="topnavi.ho.sitemap.loseblattwerke" class="sitemap-group__link ">
+              Loseblattwerke
+            </a>
+          </li>
+        
+          <li class="sitemap-group__item sitemap-group__item--imonitor">
+            <a href="https://www.heise.de/netze/netzwerk-tools/imonitor-internet-stoerungen/" title="heise iMonitor" name="topnavi.ho.sitemap.imonitor" class="sitemap-group__link ">
+              iMonitor
+            </a>
+          </li>
+        
+          <li class="sitemap-group__item sitemap-group__item--itmarkt">
+            <a href="https://www.heise.de/itmarkt/" title="IT-Markt &#x2013; Branchenverzeichnis der IT-Fachh&#xE4;ndler" name="topnavi.ho.sitemap.itmarkt" class="sitemap-group__link ">
+              IT-Markt
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </a-collapse>
+
+
+  
+
+<a-collapse class="sitemap-group " has-indicator="">
+    <header class="sitemap-group__header" data-collapse-trigger="">
+      Heise Medien
+    </header>
+
+    <div class="sitemap-group__content" data-collapse-target="">
+      <ul class="sitemap-group__items">
+        
+          <li class="sitemap-group__item sitemap-group__item--shop">
+            <a href="https://shop.heise.de/" title="heise shop &#x2013; IT Fachzeitschriften, B&#xFC;cher, CD/DVD/Blu-ray" name="topnavi.ho.sitemap.shop" class="sitemap-group__link ">
+              heise shop
+            </a>
+          </li>
+        
+          <li class="sitemap-group__item sitemap-group__item--artikel-archiv">
+            <a href="https://shop.heise.de/artikel-archiv/" title="Artikel-Archiv &#x2013; c&apos;t, iX, Technology Review, c&apos;t Fotografie, Mac &amp; i, Make, Sonderhefte" name="topnavi.ho.sitemap.artikel-archiv" class="sitemap-group__link ">
+              Artikel-Archiv
+            </a>
+          </li>
+        
+          <li class="sitemap-group__item sitemap-group__item--abo">
+            <a href="https://shop.heise.de/abo" title="Abo &#x2013; c&apos;t, iX, Technology Review, c&apos;t Fotografie, Mac &amp; i, Make" name="topnavi.ho.sitemap.abo" class="sitemap-group__link ">
+              Abo
+            </a>
+          </li>
+        
+          <li class="sitemap-group__item sitemap-group__item--events">
+            <a href="https://www.heise.de/events/" title="heise Events &#x2013; Konferenzen, Seminare, Workshops" name="topnavi.ho.sitemap.events" class="sitemap-group__link ">
+              Veranstaltungen
+            </a>
+          </li>
+        
+          <li class="sitemap-group__item sitemap-group__item--hmg">
+            <a href="https://heise-gruppe.de/-1812545" title="Arbeiten bei heise &#x2013; Heise als Arbeitgeber" name="topnavi.ho.sitemap.hmg" class="sitemap-group__link ">
+              Arbeiten bei Heise
+            </a>
+          </li>
+        
+          <li class="sitemap-group__item sitemap-group__item--mediadaten">
+            <a href="https://www.heise.de/mediadaten/" title="Mediadaten Heise Medien" name="topnavi.ho.sitemap.mediadaten" class="sitemap-group__link ">
+              Mediadaten
+            </a>
+          </li>
+        
+          <li class="sitemap-group__item sitemap-group__item--presse">
+            <a href="https://www.heise-gruppe.de/presse/" title="Presse Informationen" name="topnavi.ho.sitemap.presse" class="sitemap-group__link ">
+              Presse
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </a-collapse>
+
+</nav>
+
+
+        <div class="topnavigation__brandworld">
+          <span class="topnavigation__brandworld-label">Anzeige: </span>
+          <a href="https://www.heise.de/brandworlds/cloud-services/?source=Topnavi" class="topnavigation__brandworld-link" rel="nofollow" target="_blank" name="dachzeile.ho.brandworld.cloudservices">
+            Cloud Services
+          </a>
+          
+        </div>
+      </div>
+
+    </header>
+</div>
+
+
+              
+        
+    
+
+
+
+  
+
+  
+  
+  
+
+  <div id="container">
+    
+
+
+  <div class="ad-container">
+          
+
+
+
+
+
+  <a-ad width="970" height="90" layout="fixed" instant="" class="ad-container__leaderboard" sizes="728x90,800x250,960x250,970x250,1104x90" targeting="{&quot;cms&quot;:4500303,&quot;kw&quot;:[&quot;Android&quot;,&quot;Barrierefreiheit&quot;,&quot;Mobile Development&quot;],&quot;pos&quot;:[&quot;top&quot;],&quot;themenhub&quot;:&quot;yes&quot;}" unit="/6514/www.heise.de/developer/developer-inhalt" type="gpt" preload-distance="200" media="(min-width: 1240px)"></a-ad>
+
+
+
+
+
+
+  <a-ad width="970" height="90" layout="fixed" instant="" class="ad-container__leaderboard" sizes="728x90,800x250,960x250,970x250" targeting="{&quot;cms&quot;:4500303,&quot;kw&quot;:[&quot;Android&quot;,&quot;Barrierefreiheit&quot;,&quot;Mobile Development&quot;],&quot;pos&quot;:[&quot;top&quot;],&quot;themenhub&quot;:&quot;yes&quot;}" unit="/6514/www.heise.de/developer/developer-inhalt" type="gpt" preload-distance="200" media="(min-width: 1024px) and (max-width: 1239px)"></a-ad>
+
+
+
+
+
+
+  <a-ad width="728" height="90" layout="fixed" instant="" class="ad-container__leaderboard" sizes="728x90" targeting="{&quot;cms&quot;:4500303,&quot;kw&quot;:[&quot;Android&quot;,&quot;Barrierefreiheit&quot;,&quot;Mobile Development&quot;],&quot;pos&quot;:[&quot;top&quot;],&quot;themenhub&quot;:&quot;yes&quot;}" unit="/6514/www.heise.de/developer/developer-inhalt" type="gpt" preload-distance="200" media="(min-width: 768px) and (max-width: 1023px)"></a-ad>
+
+
+        
+
+
+
+
+
+  <a-ad width="970" height="90" layout="fixed" acceptable="" instant="" class="ad-container__leaderboard" sizes="728x90" targeting="{&quot;cms&quot;:4500303,&quot;kw&quot;:[&quot;Android&quot;,&quot;Barrierefreiheit&quot;,&quot;Mobile Development&quot;],&quot;pos&quot;:[&quot;top&quot;],&quot;themenhub&quot;:&quot;yes&quot;}" unit="/6514/www.heise.de/developer/developer-inhalt" type="gpt" preload-distance="200" media="(min-width: 1240px)"></a-ad>
+
+
+      
+
+
+    
+        
+
+
+
+
+
+  <a-ad width="200" height="800" layout="fixed" instant="" class="ad-container__skyscraper ad-container__skyscraper--right" sizes="120x600,120x800,160x600,160x800,200x600,200x800" targeting="{&quot;cms&quot;:4500303,&quot;kw&quot;:[&quot;Android&quot;,&quot;Barrierefreiheit&quot;,&quot;Mobile Development&quot;],&quot;pos&quot;:[&quot;top&quot;],&quot;themenhub&quot;:&quot;yes&quot;}" unit="/6514/www.heise.de/developer/developer-inhalt" type="gpt" preload-distance="200" media="(min-width: 1310px)"></a-ad>
+
+
+    
+  </div>
+
+    <div id="container_content">
+      <div class="main-header">
+        <div class="logo_bereich">
+            <div class="logo">
+              <a href="https://www.heise.de/developer/" title="heise Developer" name="header.developer.logo">
+                <svg preserveaspectratio="xMinYMin" xmlns="http://www.w3.org/2000/svg" width="280" height="40" viewbox="0 0 595 86"><path data-name="developer" d="M228.8 64v-3.8h6V21.3h-6v-3.7h23.8c8.3 0 14.7 2 19.1 6s6.6 9.7 6.6 17.2-2.2 13.2-6.6 17.2-10.8
+                6-19.1 6h-23.8zm17.9-3.7h4.3c4.8 0 8.4-1.6 10.6-4.7s3.3-8 3.3-14.8-1.1-11.7-3.3-14.7-5.8-4.6-10.6-4.6h-4.3v38.7zM319.8
+                49h-22.7v.2c0 4.2.7 7.4 1.9 9.2s3.3 2.8 6.3 2.8a8.6 8.6 0 0 0 5.8-1.9 9.1 9.1 0 0 0 2.8-5.5h5.1a13.3 13.3 0 0 1-5.3
+                8.3c-2.7 1.8-6.3 2.7-11.2 2.7s-10.1-1.5-13.2-4.5-4.6-7.3-4.6-12.9 1.6-9.7 4.7-12.8 7.5-4.6 13-4.6 9.7 1.6 12.6 4.8 4.7
+                8 4.8 14.2zm-12.1-3.6c0-4.3-.4-7.4-1.2-9.2a4.2 4.2 0 0 0-4.2-2.6 4.3 4.3 0 0 0-4.1 2.6c-.8 1.7-1.2 4.6-1.2
+                8.6v.6h10.6zM338.2 64l-11.7-29.3h-3.6v-3.8h19v3.8h-4l8.3 20.8 8.3-20.8h-4.3v-3.8h12.4v3.8h-3.8L347.1
+                64h-8.9zm61.7-15h-22.7v.2c0 4.2.7 7.4 1.9 9.2s3.3 2.8 6.3 2.8a8.6 8.6 0 0 0 5.8-1.9 9.1 9.1 0 0 0 2.8-5.5h5.1a13.3
+                13.3 0 0 1-5.3 8.3c-2.7 1.8-6.3 2.7-11.2 2.7s-10.1-1.5-13.2-4.5-4.6-7.3-4.6-12.9 1.6-9.7 4.7-12.8 7.5-4.6 13-4.6 9.7
+                1.6 12.6 4.8 4.6 8 4.8 14.2zm-12.1-3.6c0-4.3-.4-7.4-1.2-9.2a4.2 4.2 0 0 0-4.2-2.6 4.3 4.3 0 0 0-4.1 2.6c-.8 1.7-1.2
+                4.6-1.2 8.6v.6h10.6zm34.1 14.9h4.7V64h-20.4v-3.8h4.7V19.3h-4.7v-3.7h15.7v44.6zm28.9 4.6c-5.8
+                0-10.4-1.6-13.7-4.6s-5-7.4-5-12.8 1.6-9.7 5-12.8S445 30 450.8 30s10.4 1.6 13.7 4.6 4.9 7.4 4.9 12.8-1.6 9.7-5 12.8-7.8
+                4.7-13.6 4.7zm0-3.5a5 5 0 0 0 4.9-3c1-2 1.4-5.7 1.4-10.9s-.4-8.9-1.4-10.9a5 5 0 0 0-4.9-3 4.9 4.9 0 0 0-4.9 3c-1 2-1.4
+                5.7-1.4 10.9s.4 8.9 1.4 10.9a4.8 4.8 0 0 0 4.9 3zm28.6-26.6h-4.7v-3.9h15.7v4.2a9.5 9.5 0 0 1 3.8-3.9 12.5 12.5 0 0 1
+                5.9-1.3c4.7 0 8.4 1.6 11.1 4.6s4.1 7.4 4.1 12.7-1.3 9.8-4.1 12.9-6.4 4.7-11.1 4.7a12.9 12.9 0 0 1-5.9-1.3 8.7 8.7 0 0
+                1-3.8-3.9v13.7h5.1v3.8h-20.7v-3.8h4.7V34.7zm11 11.1v3.3c0 3.9.5 6.6 1.5 8.3a5.1 5.1 0 0 0 4.8 2.6 4.8 4.8 0 0 0
+                4.8-2.8c.9-1.8 1.4-5.1 1.4-9.8s-.4-8-1.4-9.8a5 5 0 0 0-4.8-2.8 5 5 0 0 0-4.8 2.6c-1 1.7-1.4 4.5-1.4 8.3zm66.3 3.1H534v.2c0
+                4.2.7 7.4 1.9 9.2s3.3 2.8 6.3 2.8a8.6 8.6 0 0 0 5.8-1.9 9.1 9.1 0 0 0 2.8-5.5h5.1a13.3 13.3 0 0 1-5.3 8.3c-2.7 1.8-6.3
+                2.7-11.2 2.7s-10.1-1.5-13.2-4.5-4.6-7.3-4.6-12.9 1.6-9.7 4.7-12.8 7.5-4.6 13-4.6 9.7 1.6 12.6 4.8 4.6 8 4.8
+                14.2zm-12.1-3.6c0-4.3-.4-7.4-1.2-9.2a4.2 4.2 0 0 0-4.2-2.6 4.3 4.3 0 0 0-4.1 2.6c-.8 1.7-1.2 4.6-1.2 8.6v.6h10.6zM595
+                30.6v9.8h-3.5a6.4 6.4 0 0 0-1.4-3.9 4.6 4.6 0 0 0-3.6-1.3 6.3 6.3 0 0 0-5.7 3.2c-1.4 2.1-2.1 5.1-2.1
+                8.8v13h6V64H563v-3.8h4.7V34.7h-5.1v-3.8h16.1v5.9a11.8 11.8 0 0 1 4.2-5.1 12.1 12.1 0 0 1 6.5-1.6h2.4z" fill="#661136"/><path d="M100.9 27.9h4.4v15.4h.1a8.6 8.6 0 0 1 3.2-3.1 9.5 9.5 0 0 1 4.6-1.3c3.3 0 8.6 2 8.6
+                10.5V64h-4.4V49.9c0-3.9-1.5-7.3-5.7-7.3a6.4 6.4 0 0 0-6 4.4 6 6 0 0 0-.3 2.1V64H101V27.9zm30.7 24.6c.1 6 3.9 8.5 8.4
+                8.5a17.1 17.1 0 0 0 6.8-1.3l.7 3.2a19 19 0 0 1-8.1 1.6c-7.6 0-12.1-5-12.1-12.4s4.4-13.3 11.5-13.3 10.1 7 10.1 11.6a13.3
+                13.3 0 0 1-.1 2.1h-17.2zm13-3.3c.1-2.8-1.2-7.3-6.2-7.3s-6.5 4.1-6.8 7.3h13zm14.8-16.7a2.6 2.6 0 0 1-2.8 2.7 2.6 2.6 0
+                0 1-2.7-2.7 2.8 2.8 0 0 1 2.8-2.8 2.6 2.6 0 0 1 2.7 2.8zm-5 31.4V39.4h4.4v24.5h-4.4zm11.3-4.5a11.4 11.4 0 0 0 5.9 1.8c3.3
+                0 4.7-1.6 4.7-3.6s-1.3-3.3-4.6-4.5-6.5-4-6.5-7 3.2-7.2 8.4-7.2a11.8 11.8 0 0 1 6 1.6l-1.1 3.3a9.7 9.7 0 0 0-5-1.4c-2.7
+                0-4.1 1.6-4.1 3.3s1.5 3 4.7 4.1 6.4 3.8 6.4 7.4-3.3 7.4-9.2 7.4a14.5 14.5 0 0 1-6.9-1.7zm23.2-6.9c.1 6 3.9 8.5 8.4
+                8.5a17.1 17.1 0 0 0 6.8-1.3l.7 3.2a19 19 0 0 1-8.1 1.6c-7.6 0-12.1-5-12.1-12.4s4.4-13.3 11.5-13.3 10.1 7 10.1 11.6a13.3
+                13.3 0 0 1-.1 2.1h-17.2zm13-3.3c.1-2.8-1.2-7.3-6.2-7.3s-6.5 4.1-6.8 7.3h13zM71.4 57.6L68.3 55a28.3 28.3 0 0 0 6.2-17.3C74.5
+                19.7 60.4 8 43 8 19.7 8 11.5 26.4 11.5 47c0 18.2 13.4 33.3 31.9 33.3a45.9 45.9 0 0 0 26.4-8.4 28 28 0 0 0 4.2-3.6l1.8
+                2.7a43.2 43.2 0 0 1-31.9 15C19.9 86.1 0 68.6 0 43.9S18.3 0 43.5 0c20.8 0 38.1 13.1 38.1 35 0 8.1-4.3 17.1-10.2 22.6zM49.3
+                27.7l-14 31.7c-1.2 2.7-3 5.8-6.3 5.8a4.2 4.2 0 0 1-4.3-4.2c0-1.9 1-3.7 1.7-5.4l15.1-34.5c1.2-2.6 2.6-4.5 5.6-4.5a4 4 0 0
+                1 4.2 4.2c0 2.5-1.1 4.8-2 6.9zm11 19.3l-5.6 12.6c-1.3 2.7-3 5.6-6.4 5.6a4 4 0 0 1-4.2-4.2 12.9 12.9 0 0 1
+                1.7-5.3l6.7-15.2c1.2-2.5 2.6-4.5 5.6-4.5a4 4 0 0 1 4.2 4.2 16.2 16.2 0 0 1-2 6.8z" fill="#888"/></svg>
+              </a>
+            </div>
+            
+            <nav class="dev-nav-socialmedia">
+              <a href="https://www.heise.de/forum/heise-Developer/Themen-Hilfe/forum-36206/" title="heise Developer Foren" class="dev-nav-socialmedia__foren" name="header.developer.sm.foren">Foren</a>
+              <a href="https://www.heise.de/developer/kontakt/" title="Kontakt zur Redaktion" class="dev-nav-socialmedia__kontakt" name="header.developer.sm.kontakt">Kontakt</a>
+              <a href="https://twitter.com/#!/heisedc" title="heise Developer auf Twitter folgen" class="dev-nav-socialmedia__twitter dev-socialmedia" name="header.developer.sm.twitter">
+                <svg height="20" width="20" viewbox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg" preserveaspectratio="xMinYMin"><path fill="#fff" d="M1684 408q-67 98-162 167 1 14 1 42 0 130-38 259.5T1369.5 1125 1185 1335.5t-258 146-323 54.5q-271 0-496-145
+                35 4 78 4 225 0 401-138-105-2-188-64.5T285 1033q33 5 61 5 43 0 85-11-112-23-185.5-111.5T172 710v-4q68 38 146
+                41-66-44-105-115t-39-154q0-88 44-163 121 149 294.5 238.5T884 653q-8-38-8-74 0-134 94.5-228.5T1199 256q140 0 236 102
+                109-21 205-78-37 115-142 178 93-10 186-50z"/></svg>
+              </a>
+              <a href="https://www.heise.de/newsletter/manage/developer" title="heise Developer Newsletter" class="dev-nav-socialmedia__newsletter dev-socialmedia" name="header.developer.sm.newsletter">
+                <svg preserveaspectratio="xMinYMin" height="20" width="20" viewbox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M1792 710v794q0 66-47 113t-113 47H160q-66 0-113-47T0 1504V710q44 49 101 87 362 246 497 345 57 42 92.5 65.5t94.5 48
+                110 24.5h2q51 0 110-24.5t94.5-48 92.5-65.5q170-123 498-345 57-39 100-87zm0-294q0 79-49 151t-122 123q-376 261-468 325-10
+                7-42.5 30.5t-54 38-52 32.5-57.5 27-50 9h-2q-23 0-50-9t-57.5-27-52-32.5-54-38T639 1015q-91-64-262-182.5T172
+                690q-62-42-117-115.5T0 438q0-78 41.5-130T160 256h1472q65 0 112.5 47t47.5 113z" fill="#fff"/></svg>
+              </a>
+              <a href="https://www.heise.de/developer/rss/news-atom.xml" title="heise Developer RSS-Feed abonnieren" class="dev-nav-socialmedia__rss dev-socialmedia" name="header.developer.sm.rss">
+                <svg preserveaspectratio="xMinYMin" height="20" width="20" viewbox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M576 1344q0 80-56 136t-136 56-136-56-56-136 56-136 136-56 136 56 56 136zm512 123q2 28-17 48-18 21-47 21H889q-25
+                0-43-16.5t-20-41.5q-22-229-184.5-391.5T250 902q-25-2-41.5-20T192 839V704q0-29 21-47 17-17 43-17h5q160 13 306 80.5T826
+                902q114 113 181.5 259t80.5 306zm512 2q2 27-18 47-18 20-46 20h-143q-26 0-44.5-17.5T1329
+                1476q-12-215-101-408.5t-231.5-336-336-231.5T252 398q-25-1-42.5-19.5T192 335V192q0-28 20-46 18-18 44-18h3q262 13 501.5
+                120T1186 542q187 186 294 425.5t120 501.5z" fill="#fff"/></svg>
+              </a>
+            </nav>
+          </div>
+          <nav id="main_navigation" class="touch_detect">
+            <ul class="clearfix">
+                <li>
+                  <a href="https://www.heise.de/developer/" title="News" name="navi.developer.news" class="dropdown">News</a>
+                    <ul class="subnavigation">
+                        <li>
+                          <a href="https://www.heise.de/developer/news/" title="7-Tage-News" name="subnavi.developer.7-tage-news">7-Tage-News</a>
+                        </li>
+                        <li>
+                          <a href="https://www.heise.de/developer/news/archiv/" title="News-Archiv" name="subnavi.developer.news-archiv">News-Archiv</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="aktiv">
+                  <a href="https://www.heise.de/developer/rubriken/" title="Rubriken" name="navi.developer.rubriken" class="dropdown">Rubriken</a>
+                    <ul class="subnavigation">
+                        <li>
+                          <a href="https://www.heise.de/developer/sprachen-1037.html" title="Sprachen" name="subnavi.developer.sprachen">Sprachen</a>
+                        </li>
+                        <li>
+                          <a href="https://www.heise.de/developer/architektur-methoden-1031.html" title="Architektur/Methoden" name="subnavi.developer.architektur-methoden">Architektur/Methoden</a>
+                        </li>
+                        <li>
+                          <a href="https://www.heise.de/developer/werkzeuge-1041.html" title="Werkzeuge" name="subnavi.developer.werkzeuge">Werkzeuge</a>
+                        </li>
+                        <li>
+                          <a href="https://www.heise.de/developer/know-how-1033.html" title="Know-how" name="subnavi.developer.know-how">Know-how</a>
+                        </li>
+                        <li>
+                          <a href="https://www.heise.de/developer/standards-1039.html" title="Standards" name="subnavi.developer.standards">Standards</a>
+                        </li>
+                        <li>
+                          <a href="https://www.heise.de/developer/literatur-1035.html" title="Literatur" name="subnavi.developer.literatur">Literatur</a>
+                        </li>
+                        <li>
+                          <a href="https://www.heise.de/developer/videos-3294461.html" title="Videos" name="subnavi.developer.videos">Videos</a>
+                        </li>
+                        <li>
+                          <a href="https://www.heise.de/developer/Veranstaltungsberichte-3344266.html" title="Veranstaltungsberichte" name="subnavi.developer.veranstaltungsberichte">Veranstaltungsberichte</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                  <a href="https://www.heise.de/developer/blog/" title="Blogs" name="navi.developer.blogs" class="dropdown">Blogs</a>
+                    <ul class="subnavigation">
+                        <li>
+                          <a href="https://www.heise.de/developer/der-dotnet-doktor-1292.html" title="Der Dotnet-Doktor" name="subnavi.developer.der-dotnet-doktor">Der Dotnet-Doktor</a>
+                        </li>
+                        <li>
+                          <a href="https://www.heise.de/developer/the-next-big-thing-1790061.html" title="the next big thing" name="subnavi.developer.the-next-big-thing">the next big thing</a>
+                        </li>
+                        <li>
+                          <a href="https://www.heise.de/developer/neuigkeiten-von-der-insel-1920360.html" title="Neuigkeiten von der Insel" name="subnavi.developer.neuigkeiten-von-der-insel">Neuigkeiten von der Insel</a>
+                        </li>
+                        <li>
+                          <a href="https://www.heise.de/developer/Tales_from_the_Web_side-2548664.html" title="Tales from the Web side" name="subnavi.developer.tales-from-the-web-side">Tales from the Web side</a>
+                        </li>
+                        <li>
+                          <a href="https://www.heise.de/developer/Continuous-Architecture-2687847.html" title="Continuous Architecture" name="subnavi.developer.continuous-architecture">Continuous Architecture</a>
+                        </li>
+                        <li>
+                          <a href="https://www.heise.de/developer/Der_Pragmatische_Architekt-2732748.html" title="Der Pragmatische Architekt" name="subnavi.developer.der-pragmatische-architekt">Der Pragmatische Architekt</a>
+                        </li>
+                        <li>
+                          <a href="https://www.heise.de/developer/UeberKreuz-2753600.html" title="&#xDC;berKreuz " name="subnavi.developer.&#xFC;berkreuz-">&#xDC;berKreuz </a>
+                        </li>
+                        <li>
+                          <a href="https://www.heise.de/developer/ModernesCplusplus-3691794.html" title="Modernes C++" name="subnavi.developer.modernes-c++">Modernes C++</a>
+                        </li>
+                        <li>
+                          <a href="https://www.heise.de/developer/colspan-3971774.html" title="colspan" name="subnavi.developer.colspan">colspan</a>
+                        </li>
+                        <li>
+                          <a href="https://www.heise.de/developer/ich-roll-dann-mal-aus-4173959.html" title="&quot;Ich roll&apos; dann mal aus&quot;" name="subnavi.developer.ich-roll&apos;-dann-mal-aus">&quot;Ich roll&apos; dann mal aus&quot;</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                  <a href="https://www.heise.de/developer/podcast/" title="Podcasts" name="navi.developer.podcasts" class="dropdown">Podcasts</a>
+                    <ul class="subnavigation">
+                        <li>
+                          <a href="https://www.heise.de/developer/MeinScrumIstKaputt-4076346.html" title="Mein Scrum ist kaputt" name="subnavi.developer.mein-scrum-ist-kaputt">Mein Scrum ist kaputt</a>
+                        </li>
+                        <li>
+                          <a href="https://www.heise.de/developer/SoftwareArchitekTOUR-4076349.html" title="SoftwareArchitekTOUR" name="subnavi.developer.softwarearchitektour">SoftwareArchitekTOUR</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                  <a href="https://www.heise.de/developer/videos-3294461.html" title="Videos" name="navi.developer.videos">Videos</a>
+                </li>
+                <li>
+                  <a href="https://www.heise.de/developer/Die-Entwicklerkonferenzen-der-Heise-Medien-2725968.html" title="Konferenzen" name="navi.developer.konferenzen">Konferenzen</a>
+                </li>
+                <li>
+                  <a href="https://www.heise.de/developer/termine/" title="Termine" name="navi.developer.termine">Termine</a>
+                </li>
+            </ul>
+          </nav>
+        </div>
+          
+    <ol class="breadcrumb" itemscope="" itemtype="http://schema.org/BreadcrumbList">
+            <li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+                <a itemprop="item" href="https://www.heise.de/developer/" title="heise Developer">
+                    <span itemprop="name">heise Developer</span>
+                </a>
+                <meta itemprop="position" value="1">
+            </li>
+            <li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+                <a itemprop="item" href="https://www.heise.de/developer/rubriken/" title="Rubriken">
+                    <span itemprop="name">Rubriken</span>
+                </a>
+                <meta itemprop="position" value="2">
+            </li>
+            <li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+                <a itemprop="item" href="https://www.heise.de/developer/know-how-1033.html" title="Know-how">
+                    <span itemprop="name">Know-how</span>
+                </a>
+                <meta itemprop="position" value="3">
+            </li>
+                    <li class="active">
+                        Barrierefreiheit: Stolpersteine bei mobilen Anwendungen &#xFC;berwinden, Teil 2
+                    </li>
+    </ol>
+
+
+        <div id="mitte">
+          
+    
+<article class="akwa-article pre-akwa-article" itemscope="" itemtype="http://schema.org/CreativeWork">
+  
+
+
+  
+
+  
+<header class="article-header">
+
+  <div class="article-header-content">
+
+  
+  
+
+
+
+
+
+  
+    <h1 class="article__heading" itemprop="headline">
+  
+
+      Barrierefreiheit: Stolpersteine bei mobilen Anwendungen &#xFC;berwinden, Teil 2
+
+      
+
+      
+
+      </h1>
+    
+
+
+      <p class="article-content__lead">Der barrierefreie Zugang zu Apps ist wichtig. Allgemeine Designrichtlinien und konkrete Ma&#xDF;nahmen helfen bei der Umsetzung.
+      </p>
+
+  
+
+    <div class="publish-info">
+        <span class="publish-info__rubrik">
+          Know-how
+        </span>
+        <time class="publish-info__date" datetime="2019-08-27T10:12:00+02:00" itemprop="datePublished">27.08.2019&#xA0;10:12&#xA0;Uhr
+        </time>
+          <span class="publish-info__author" itemprop="author">
+              Roman Zimmer, Alexander Huber, Martin Kinting
+          </span>
+
+        <a href="https://www.heise.de/forum/heise-Developer/Kommentare/Barrierefreiheit-Stolpersteine-bei-mobilen-Anwendungen-ueberwinden-Teil-2/forum-432740/comment/" title="Meldung vorlesen und MP3-Download" class="kommentare-info">
+          &#xA0;&#x2013;&#xA0;  <span itemprop="commentCount">0</span> Kommentare
+        </a>
+    </div>
+  </div>
+
+  
+    
+  
+
+<figure class="article-image aufmacherbild">
+    
+
+<a-img width="16" height="9" layout="responsive" src="https://www.heise.de/developer/imgs/06/2/7/3/3/6/8/1/accessibility-shutterstock-f03f3155d0416c40.jpeg" alt="Barrierefreiheit: Stolpersteine bei mobilen Anwendungen &#xFC;berwinden, Teil 2" quality="85" high-dpi-quality="70" instant="" style="height: 0; padding-top: 56.25%;"></a-img>
+
+<noscript>
+  
+
+<img src="https://heise.cloudimg.io/width/200/q30.png-lossy-30.webp-lossy-30.foil1/_www-heise-de_/developer/imgs/06/2/7/3/3/6/8/1/accessibility-shutterstock-f03f3155d0416c40.jpeg%202x" srcset="https://heise.cloudimg.io/width/200/q30.png-lossy-30.webp-lossy-30.foil1/_www-heise-de_/developer/imgs/06/2/7/3/3/6/8/1/accessibility-shutterstock-f03f3155d0416c40.jpeg 2x" alt="Barrierefreiheit: Stolpersteine bei mobilen Anwendungen &#xFC;berwinden, Teil 2" class="" style="width:100%;">
+
+</noscript>
+
+</figure>
+
+
+
+  
+
+</header>
+
+
+  <div class="article-content pre-akwa-article__content">
+
+    
+
+  
+      <nav class="pre-akwa-toc">
+
+        <header class="pre-akwa-toc__header">
+          Inhaltsverzeichnis
+        </header>
+
+        <ol class="pre-akwa-toc__list">
+            <li class="pre-akwa-toc__item
+                      pre-akwa-toc__item--current ">
+
+              
+                  <span class="pre-akwa-toc__text" aria-current="page">
+              
+
+                
+                  Barrierefreiheit: Stolpersteine bei mobilen Anwendungen &#xFC;berwinden, Teil 2
+                
+
+              
+                </span>
+            </li>
+            <li class="pre-akwa-toc__item
+                      ">
+
+              
+                <a href="https://www.heise.de/developer/artikel/Barrierefreiheit-Stolpersteine-bei-mobilen-Anwendungen-ueberwinden-Teil-2-4500303.html?seite=2" class="pre-akwa-toc__link">
+              
+
+                
+                  Gerichtete Navigation
+                
+
+              
+                </a>
+              
+            </li>
+            <li class="pre-akwa-toc__item
+                      ">
+
+              
+                <a href="https://www.heise.de/developer/artikel/Barrierefreiheit-Stolpersteine-bei-mobilen-Anwendungen-ueberwinden-Teil-2-4500303.html?seite=3" class="pre-akwa-toc__link">
+              
+
+                
+                  Probieren geht &#xFC;ber Studieren
+                
+
+              
+                </a>
+              
+            </li>
+            <li class="pre-akwa-toc__item
+                      ">
+
+              
+                <a href="https://www.heise.de/developer/artikel/Barrierefreiheit-Stolpersteine-bei-mobilen-Anwendungen-ueberwinden-Teil-2-4500303.html?seite=4" class="pre-akwa-toc__link">
+              
+
+                
+                  Fortschritte und Empfehlungen
+                
+
+              
+                </a>
+              
+            </li>
+          
+            <li class="pre-akwa-toc__item pre-akwa-toc__item--onepage">
+              <a href="https://www.heise.de/developer/artikel/Barrierefreiheit-Stolpersteine-bei-mobilen-Anwendungen-ueberwinden-Teil-2-4500303.html?seite=all" rel="nofollow" class="pre-akwa-toc__link">
+                Auf einer Seite lesen
+              </a>
+            </li>
+        </ol>
+      </nav>
+
+
+    
+      
+
+
+
+
+
+  <a-ad width="300" height="250" layout="responsive" instant="" class="bcadv ISI_IGNORE bcadv_oben" sizes="300x250,300x600,fluid" targeting="{&quot;cms&quot;:4500303,&quot;kw&quot;:[&quot;Android&quot;,&quot;Barrierefreiheit&quot;,&quot;Mobile Development&quot;],&quot;pos&quot;:[&quot;top&quot;],&quot;themenhub&quot;:&quot;yes&quot;}" unit="/6514/www.heise.de/developer/developer-inhalt" type="gpt" preload-distance="200" media="(min-width: 992px)"></a-ad>
+
+
+    
+
+    <p>Im Fr&#xFC;hjahr 2009 erschien die erste nach einer S&#xFC;&#xDF;speise benannte Version des damals noch jungen mobilen Betriebssystems Android. Cupcake (Android 1.5) besa&#xDF; noch keine Funktion zur barrierefreien Bedienung. Das &#xE4;nderte sich jedoch noch im gleichen Jahr mit der Ver&#xF6;ffentlichung von Donut (Android 1.6) sowie Googles mobile Screenreader TalkBack. Damit hielt eine grundlegende Zug&#xE4;nglichkeit Einzug in Android, die kontinuierlich mit jeder neueren Version <a href="https://accessibleandroid.wordpress.com/2013/08/02/a-brief-history-of-android-accessibility/" rel="external noopener" target="_blank">verbessert</a> und <a href="https://android-developers.googleblog.com/2012/04/accessibility-are-you-serving-all-your.html" rel="external noopener" target="_blank">dokumentiert</a> wurde. Damit feiert der komfortable Weg, zug&#xE4;ngliche Apps unter Android zu entwickeln, im Jahr 2019 zehnj&#xE4;hriges Jubil&#xE4;um &#x2013; eine gute Gelegenheit f&#xFC;r einen Blick auf den Status quo.</p>
+<h3 class="subheading">Stolperfallen verhindern</h3>
+<p>Eine App unter Android zug&#xE4;nglicher zu gestalten, erfordert in der Regel keine gr&#xF6;&#xDF;eren Umstrukturierungen des Quellcodes. Vielmehr gilt es, &#xE4;hnlich wie bei der Unterst&#xFC;tzung <a href="https://developer.android.com/training/multiscreen/screendensities" rel="external noopener" target="_blank">unterschiedlicher Displaygr&#xF6;&#xDF;en</a> einige grunds&#xE4;tzliche Empfehlungen und Erg&#xE4;nzungen zu beherzigen &#x2013; idealerweise ab dem Start der Entwicklung. Bereits kleine Anpassungen w&#xE4;hrend des Erstellens der Layoutdateien haben einen gro&#xDF;en positiven Effekt auf die Zug&#xE4;nglichkeit der App.</p>
+
+
+
+  
+
+
+
+    <div class="rte__textbox akwa-inline-textbox rte__pos_left col-lg-4 col-md-5 col-sm-5 col-xs-12 akwa-inline--left">
+        <h4>Barrierefreiheit: Stolpersteine bei mobilen Anwendungen &#xFC;berwinden</h4>
+<ul><li><a href="https://www.heise.de/developer/artikel/Barrierefreiheit-Stolpersteine-bei-mobilen-Anwendungen-ueberwinden-Teil-1-4476673.html">Teil 1: Herangehensweise und Hindernisse</a></li><li><strong>Teil 2: Praktische Umsetzung f&#xFC;r Android</strong></li></ul>
+    </div>
+
+
+<p>Allgemeine Designempfehlungen zum Gestalten zug&#xE4;nglicher Apps hat Google <a href="https://material.io/design/usability/accessibility.html" rel="external noopener" target="_blank">im Rahmen der Dokumentation zum Material Design</a> ver&#xF6;ffentlicht. Im Folgenden stehen daher konkrete Ma&#xDF;nahmen f&#xFC;r Entwickler nativer Apps auf Basis der <a href="https://developer.android.com/guide/topics/ui/accessibility" rel="external noopener" target="_blank">offiziellen Richtlinien von Google</a> im Fokus. Die Codebeispiele konzentrieren sich vorwiegend auf die jeweils ausschlaggebenden XML-Attribute in den Layout-Ressourcen. Diese statischen Angaben sind zu w&#xE4;hlen, wenn sich die Werte nicht zur Laufzeit der App &#xE4;ndern. Sollte sich das Aussehen der Bedienelemente beispielsweise durch Nutzerinteraktion dynamisch anpassen, gilt es, die jeweiligen Werte programmatisch zu setzen, um eine barrierefreie App-Bedienung zu gew&#xE4;hrleisten. Die Beschreibung der <a href="https://developer.android.com/reference/android/view/View.html#xml-attributes_1" rel="external noopener" target="_blank">XML-Attribute der View-Klasse</a> hilft dabei, die passende dynamische Methode schnell zu finden.</p>
+<h3 class="subheading">Beschriftung von Elementen</h3>
+<p>Um die Funktion eines Bedienelements &#xFC;ber einen Screenreader zu vermitteln, sollten Entwickler dem Bedienelement eine aussagekr&#xE4;ftige Beschriftung (Label) gegeben. Dabei m&#xFC;ssen sie das Vorleseverhalten des Screenreaders ber&#xFC;cksichtigen und eventuelle textuelle Redundanzen vermeiden. Die meisten Screenreader einschlie&#xDF;lich TalkBack nennen automatisch den Elementtyp, sodass zum beispielsweise &quot;Speichern&quot; eine bessere Beschriftung als &quot;Speicher-Button&quot; ist. Dar&#xFC;ber hinaus greift das gewohnte Wechseln der Ressourcen abh&#xE4;ngig von der (Sprach-)Konfiguration des Ger&#xE4;ts. Die <a href="https://developer.android.com/guide/topics/resources/localization" rel="external noopener" target="_blank">&#xFC;blichen Regeln zum Lokalisieren von Android-Apps</a> gelten somit auch f&#xFC;r Beschriftungen im Interesse einer verbesserten Zug&#xE4;nglichkeit.</p>
+<h5>Eingabefelder</h5>
+<p>Bei einem Eingabefeld wie <code>EditText</code> l&#xE4;sst sich das Label folgenderma&#xDF;en &#xFC;ber den Hinweistext setzen (ab API-Level 1):</p>
+<p>Statisch (XML): </p>
+<pre class="rte__tx--listing">&lt;EditText<br>    ...<br>    android:hint=&quot;@string/label&quot; /&gt;</pre>
+<p>Dynamisch (Kotlin):</p>
+<pre class="rte__tx--listing">editText.hint = getString(R.string.label)</pre>
+<h5>Text- und grafische Elemente</h5>
+<p>Bei einem Textelement wie <code>TextView</code> ist das Setzen eines Labels in der Regel nicht erforderlich, weil der Screenreader den angezeigten Text automatisch erfasst und wiedergibt. Umso wichtiger ist daf&#xFC;r eine klare und verst&#xE4;ndliche Ausdrucksweise.</p>
+<p>Bei einem grafischen Element wie <code>ImageView</code> oder <code>ImageButton</code> l&#xE4;sst sich das Label &#x2013; analog zum <a href="https://webaim.org/techniques/alttext/" rel="external noopener" target="_blank">Alternativtext in HTML</a> &#x2013; &#xFC;ber eine zus&#xE4;tzliche Beschreibung setzen (ab API-Level 4):</p>
+<p>Statisch (XML):</p>
+<pre class="rte__tx--listing">&lt;ImageButton<br>    ...<br>    android:contentDescription=&quot;@string/label&quot; /&gt;</pre>
+<p>Dynamisch (Kotlin):</p>
+<pre class="rte__tx--listing">imageButton.contentDescription = getString(R.string.label)</pre>
+<h3 class="subheading">Ausschluss grafischer Elemente</h3>
+<p>Grafische Elemente, die ausschlie&#xDF;lich einen dekorativen Zweck erf&#xFC;llen, sollten Entwickler als irrelevant f&#xFC;r den Screenreader markieren. Das Vorgehen h&#xE4;ngt vom minimal unterst&#xFC;tzten API-Level der App ab und ist wie folgt m&#xF6;glich:</p>
+<p>Statisch (XML):</p>
+<pre class="rte__tx--listing">&lt;!-- ab API-Level 4... --&gt;<br>&lt;ImageView<br>    ...<br>    android:contentDescription=&quot;@null&quot; /&gt;<br><br>&lt;!-- ...oder ab minimalem API-Level 16 --&gt;<br>&lt;ImageView<br>    ...<br>    android:importantForAccessibility=&quot;no&quot; /&gt;</pre>
+<p>Dynamisch (Kotlin):</p>
+<pre class="rte__tx--listing">// ab API-Level 4...<br>imageView.contentDescription = null<br><br>// ...oder ab minimalem API-Level 16<br>imageView.importantForAccessibility = <br>  View.IMPORTANT_FOR_ACCESSIBILITY_NO</pre>
+<h5>Label-Elemente</h5>
+<p>Ab API-Level 17 l&#xE4;sst sich zudem definieren, dass ein Element als Label f&#xFC;r ein anderes Element dienen soll:</p>
+<p>Statisch (XML):</p>
+<pre class="rte__tx--listing">&lt;TextView<br>    ...<br>    android:text=&quot;@string/label&quot;<br>    android:labelFor=&quot;@id/input_field&quot; /&gt;<br><br>&lt;EditText<br>    android:id=&quot;@+id/input_field&quot;<br>    ... /&gt;</pre>
+<p>Dynamisch (Kotlin):</p>
+<pre class="rte__tx--listing">textView.labelFor = R.id.input_field</pre>
+<h5>Gruppierung von Elementen</h5>
+<p>Logisch beziehungsweise inhaltlich zusammengeh&#xF6;rige Elemente sollten gruppiert sein, sodass der Screnreader ihren Inhalt als zusammenh&#xE4;ngende Einheit betrachtet und vorliest. Die Gruppierung l&#xE4;sst sich folgenderma&#xDF;en &#xFC;ber einen fokussierbaren Container in Form einer beliebige Unterklasse von <code>ViewGroup</code> erreichen:</p>
+<pre class="rte__tx--listing">&lt;LinearLayout<br>   ...&gt;<br><br>  &lt;RelativeLayout<br>    android:id=&quot;@+id/group1&quot;<br>     ...<br>    android:focusable=&quot;true&quot;&gt;<br><br>    &lt;TextView ... /&gt;<br><br>    &lt;TextView ... /&gt;<br><br>  &lt;/RelativeLayout&gt;<br><br>  &lt;RelativeLayout<br>    android:id=&quot;@+id/group2&quot;<br>    ...<br>    android:focusable=&quot;true&quot;&gt;<br><br>    &lt;TextView ... /&gt;<br><br>    &lt;TextView ... /&gt;<br><br>  &lt;/RelativeLayout&gt;<br><br>&lt;/LinearLayout&gt;</pre>
+<p>Eine <code>ViewGroup</code> mit <code>android:focusable=&quot;true&quot;</code> bildet demnach eine Einheit, die der Screenreader als Ganzes anspringt und die enthaltenen Elemente zusammenh&#xE4;ngend vorliest. F&#xFC;r obigen Code fokussiert das Vorleseprogramm die erste Gruppe <code>group1</code>, liest deren Inhalt vor und setzt nach einer Nutzerinteraktion bei der zweiten Gruppe <code>group2</code> seinen Dienst fort. Die einzelnen Kindelemente (hier die <code>TextView</code>s) sind dabei nicht mehr direkt fokussier- beziehungsweise ansteuerbar. Das bedeutet f&#xFC;r die Nutzer weniger Navigationsaufwand und erspart ihnen zudem unn&#xF6;tige Pausen beim Erfassen von wichtigen, zusammengeh&#xF6;rigen Informationen.</p>
+<p>Ein Hinweis sei noch angebracht: <code>android:focusable</code> wirkt sich auf die Navigationsreihenfolge bei Nutzung von Eingabehardware wie einer Tastatur aus. Daher l&#xE4;sst sich ab Android 9 Pie (API-Level 28) das nur f&#xFC;r Screenreader g&#xFC;ltige <code>android:screenReaderFocusable</code> anstelle von <code>android:focusable</code> in Situationen benutzen, in denen Letzteres unerw&#xFC;nschte Seiteneffekte bei der Navigation h&#xE4;tte.</p>
+  </div>
+
+  
+  <footer class="pre-akwa-article-footer">
+  
+
+  <nav class="akwa-seitenweise seitenweise_navigation paginiert">
+    <div class="seitenweise_navigation--flex">
+      <span class="seite_zurueck">Vorherige</span>
+      <span class="pagination">
+              <b class="active">1</b>
+              <a href="https://www.heise.de/developer/artikel/Barrierefreiheit-Stolpersteine-bei-mobilen-Anwendungen-ueberwinden-Teil-2-4500303.html?seite=2" rel="next">2</a>
+              <a href="https://www.heise.de/developer/artikel/Barrierefreiheit-Stolpersteine-bei-mobilen-Anwendungen-ueberwinden-Teil-2-4500303.html?seite=3">3</a>
+              <a href="https://www.heise.de/developer/artikel/Barrierefreiheit-Stolpersteine-bei-mobilen-Anwendungen-ueberwinden-Teil-2-4500303.html?seite=4">4</a>
+      </span>
+          <a href="https://www.heise.de/developer/artikel/Barrierefreiheit-Stolpersteine-bei-mobilen-Anwendungen-ueberwinden-Teil-2-4500303.html?seite=2" class="seite_weiter" rel="next">N&#xE4;chste</a>
+    </div>
+
+    
+  </nav>
+
+  
+
+<aside class="recommendations wide">
+  <div class="OUTBRAIN" data-src="https://www.heise.de/developer/artikel/Barrierefreiheit-Stolpersteine-bei-mobilen-Anwendungen-ueberwinden-Teil-2-4500303.html" data-widget-id="AR_1" data-ob-template="DE_Heise"></div>
+  <a-script src="https://widgets.outbrain.com/outbrain.js" name="Outbrain" needs-consent=""></a-script>
+</aside>
+
+  <div class="article-footer">
+
+    <div class="article-footer__content">
+        
+
+
+
+
+
+
+  
+      <a href="https://www.heise.de/forum/heise-Developer/Kommentare/Barrierefreiheit-Stolpersteine-bei-mobilen-Anwendungen-ueberwinden-Teil-2/forum-432740/comment/" class="kommentare_lesen_link">Kommentieren</a>
+  
+
+
+
+
+
+
+
+        <nav class="article-footer__foren">
+          <span class="article-footer__foren-lable">
+            Forum bei heise online:
+          </span>
+
+          <a href="https://www.heise.de/forum/heise-Developer/Themen-Hilfe/Mobilentwicklung/forum-364307/comment/" title="Zum Themenforum Mobilentwicklung" class="article-footer__foren__link">Mobilentwicklung
+          </a>
+        </nav>
+        <aside class="article-footer__keywords">
+          <header class="article-footer-keywords__header">
+            <span class="article-footer-keywords__lable">Themenseiten:</span>
+          </header>
+
+          <nav class="article-footer-keywords__nav">
+            <a href="https://www.heise.de/thema/Android#liste" title="News und Artikel zum Thema Android" class="article-footer-keywords__item">
+              Android
+            </a>
+            <a href="https://www.heise.de/thema/Mobile-Development#liste" title="News und Artikel zum Thema Mobile Development" class="article-footer-keywords__item">
+              Mobile Development
+            </a>
+
+            
+          </nav>
+        </aside>
+
+    </div>
+
+    
+    <aside class="teaser_adliste akwa-ad-container akwa-ad-container__microsite-list developerteaser">
+        <a href="https://www.heise.de/mediadaten/heise-online/" target="_blank" class="hinweis_anzeige">Anzeige</a>
+        <ul class="microsites" data-teaser-tracking-name="microsites" data-teaser-tracking-rank="4500303: Barrierefreiheit: Stolpersteine bei mobilen Anwendungen &#xFC;berwinden, Teil 2" data-teaser-tracking-content="ad-microsites" data-teaser-tracking-id="microsites: 4500303: Barrierefreiheit: Stolpersteine bei mobilen Anwendungen &#xFC;berwinden, Teil 2">
+            <li><a href="http://pubads.g.doubleclick.net/gampad/clk?id=4893657809&amp;iu=/6514/www.heise.de/clicktracking/textlink" rel="nofollow" target="_blank">Zeitproblem? So k&#xF6;nnen Admins entlastet werden</a></li>
+            <li><a href="http://pubads.g.doubleclick.net/gampad/clk?id=5141773368&amp;iu=/6514/www.heise.de/clicktracking/textlink" rel="nofollow" target="_blank">Neu: IT-Job-Summit am 11.&amp;12.10. in M&#xFC;nchen</a></li>
+            <li><a href="http://pubads.g.doubleclick.net/gampad/clk?id=5141757825&amp;iu=/6514/www.heise.de/clicktracking/textlink" rel="nofollow" target="_blank">IT-Jobtage im Herbst 2019: Jetzt anmelden!</a></li>
+            <li><a href="http://pubads.g.doubleclick.net/gampad/clk?id=5072227142&amp;iu=/6514/www.heise.de/clicktracking/textlink" rel="nofollow" target="_blank">Mit Microsoft Azure arbeiten &#x2013; aber wo anfangen?</a></li>
+            <li><a href="http://pubads.g.doubleclick.net/gampad/clk?id=5118140333&amp;iu=/6514/www.heise.de/clicktracking/textlink" rel="nofollow" target="_blank">T&#xE4;glich neue Jobangebote f&#xFC;r ITler: heise jobs</a></li>
+            <li><a href="http://pubads.g.doubleclick.net/gampad/clk?id=5045478687&amp;iu=/6514/www.heise.de/clicktracking/textlink" rel="nofollow" target="_blank">Wie Sie Ihr Datenpannen-Risiko deutlich mindern</a></li>
+            <li><a href="http://pubads.g.doubleclick.net/gampad/clk?id=5032231089&amp;iu=/6514/www.heise.de/clicktracking/textlink" rel="nofollow" target="_blank">Web-Anwendungen vor Bot-Angriffen sch&#xFC;tzen</a></li>
+            <li><a href="http://pubads.g.doubleclick.net/gampad/clk?id=5000323397&amp;iu=/6514/www.heise.de/clicktracking/textlink" rel="nofollow" target="_blank">Content Marketing f&#xFC;r Ihr Unternehmen</a></li>
+            <li><a href="http://pubads.g.doubleclick.net/gampad/clk?id=5140480235&amp;iu=/6514/www.heise.de/clicktracking/textlink" rel="nofollow" target="_blank">Phishing: So reduzieren Sie die Angriffsgefahr</a></li>
+        </ul>
+    </aside>
+
+
+  </div>
+
+  <div class="article-footer_shariff">
+    <div class="shariff clear" data-services="[&quot;facebook&quot;,&quot;twitter&quot;,&quot;mail&quot;,&quot;info&quot;]" data-mail-url="/developer/artikel/Barrierefreiheit-Stolpersteine-bei-mobilen-Anwendungen-ueberwinden-Teil-2-4500303.html?view=mail"></div>
+
+
+    <div class="article-footer__link-area">
+      <a href="https://heise.de/-4500303" class="article-footer__link article-footer__link--permalink">
+        https://heise.de/-4500303
+      </a>
+      <a href="https://www.heise.de/developer/artikel/Barrierefreiheit-Stolpersteine-bei-mobilen-Anwendungen-ueberwinden-Teil-2-4500303.html?view=print" rel="nofollow" class="article-footer__link article-footer__link--print">
+          Drucken
+      </a>
+    </div>
+  </div>
+
+  
+
+    
+</footer>
+
+
+  
+    
+
+
+
+
+
+  <a-ad width="695" height="600" layout="responsive" instant="" safeframe="" class="a-ad a-ad--wide" sizes="500x500,300x600,300x250,695x110,fluid" targeting="{&quot;cms&quot;:4500303,&quot;kw&quot;:[&quot;Android&quot;,&quot;Barrierefreiheit&quot;,&quot;Mobile Development&quot;],&quot;pos&quot;:[&quot;bottom&quot;],&quot;textad&quot;:[&quot;3&quot;],&quot;themenhub&quot;:&quot;yes&quot;}" unit="/6514/www.heise.de/developer/developer-inhalt" type="gpt" preload-distance="200"></a-ad>
+
+
+  
+</article>
+
+
+
+
+        </div>
+
+
+      </div>
+
+      <div id="sitemap">
+        <ul>
+            <li>
+              <b><a href="https://www.heise.de/developer/" title="News" name="footer.developer.news">News</a></b>
+                <a href="https://www.heise.de/developer/news/" title="7-Tage-News" name="footer.developer.7-tage-news">7-Tage-News</a>
+                <a href="https://www.heise.de/developer/news/archiv/" title="News-Archiv" name="footer.developer.news-archiv">News-Archiv</a>
+            </li>
+            <li>
+              <b><a href="https://www.heise.de/developer/rubriken/" title="Rubriken" name="footer.developer.rubriken">Rubriken</a></b>
+                <a href="https://www.heise.de/developer/sprachen-1037.html" title="Sprachen" name="footer.developer.sprachen">Sprachen</a>
+                <a href="https://www.heise.de/developer/architektur-methoden-1031.html" title="Architektur/Methoden" name="footer.developer.architektur-methoden">Architektur/Methoden</a>
+                <a href="https://www.heise.de/developer/werkzeuge-1041.html" title="Werkzeuge" name="footer.developer.werkzeuge">Werkzeuge</a>
+                <a href="https://www.heise.de/developer/know-how-1033.html" title="Know-how" name="footer.developer.know-how">Know-how</a>
+                <a href="https://www.heise.de/developer/standards-1039.html" title="Standards" name="footer.developer.standards">Standards</a>
+                <a href="https://www.heise.de/developer/literatur-1035.html" title="Literatur" name="footer.developer.literatur">Literatur</a>
+                <a href="https://www.heise.de/developer/videos-3294461.html" title="Videos" name="footer.developer.videos">Videos</a>
+                <a href="https://www.heise.de/developer/Veranstaltungsberichte-3344266.html" title="Veranstaltungsberichte" name="footer.developer.veranstaltungsberichte">Veranstaltungsberichte</a>
+            </li>
+            <li>
+              <b><a href="https://www.heise.de/developer/blog/" title="Blogs" name="footer.developer.blogs">Blogs</a></b>
+                <a href="https://www.heise.de/developer/der-dotnet-doktor-1292.html" title="Der Dotnet-Doktor" name="footer.developer.der-dotnet-doktor">Der Dotnet-Doktor</a>
+                <a href="https://www.heise.de/developer/the-next-big-thing-1790061.html" title="the next big thing" name="footer.developer.the-next-big-thing">the next big thing</a>
+                <a href="https://www.heise.de/developer/neuigkeiten-von-der-insel-1920360.html" title="Neuigkeiten von der Insel" name="footer.developer.neuigkeiten-von-der-insel">Neuigkeiten von der Insel</a>
+                <a href="https://www.heise.de/developer/Tales_from_the_Web_side-2548664.html" title="Tales from the Web side" name="footer.developer.tales-from-the-web-side">Tales from the Web side</a>
+                <a href="https://www.heise.de/developer/Continuous-Architecture-2687847.html" title="Continuous Architecture" name="footer.developer.continuous-architecture">Continuous Architecture</a>
+                <a href="https://www.heise.de/developer/Der_Pragmatische_Architekt-2732748.html" title="Der Pragmatische Architekt" name="footer.developer.der-pragmatische-architekt">Der Pragmatische Architekt</a>
+                <a href="https://www.heise.de/developer/UeberKreuz-2753600.html" title="&#xDC;berKreuz " name="footer.developer.&#xFC;berkreuz-">&#xDC;berKreuz </a>
+                <a href="https://www.heise.de/developer/ModernesCplusplus-3691794.html" title="Modernes C++" name="footer.developer.modernes-c++">Modernes C++</a>
+                <a href="https://www.heise.de/developer/colspan-3971774.html" title="colspan" name="footer.developer.colspan">colspan</a>
+                <a href="https://www.heise.de/developer/ich-roll-dann-mal-aus-4173959.html" title="&quot;Ich roll&apos; dann mal aus&quot;" name="footer.developer.ich-roll&apos;-dann-mal-aus">&quot;Ich roll&apos; dann mal aus&quot;</a>
+            </li>
+            <li>
+              <b><a href="https://www.heise.de/developer/podcast/" title="Podcasts" name="footer.developer.podcasts">Podcasts</a></b>
+                <a href="https://www.heise.de/developer/MeinScrumIstKaputt-4076346.html" title="Mein Scrum ist kaputt" name="footer.developer.mein-scrum-ist-kaputt">Mein Scrum ist kaputt</a>
+                <a href="https://www.heise.de/developer/SoftwareArchitekTOUR-4076349.html" title="SoftwareArchitekTOUR" name="footer.developer.softwarearchitektour">SoftwareArchitekTOUR</a>
+            </li>
+            <li>
+              <b><a href="https://www.heise.de/developer/videos-3294461.html" title="Videos" name="footer.developer.videos">Videos</a></b>
+            </li>
+            <li>
+              <b><a href="https://www.heise.de/developer/Die-Entwicklerkonferenzen-der-Heise-Medien-2725968.html" title="Konferenzen" name="footer.developer.konferenzen">Konferenzen</a></b>
+            </li>
+            <li>
+              <b><a href="https://www.heise.de/developer/termine/" title="Termine" name="footer.developer.termine">Termine</a></b>
+            </li>
+        </ul>
+      </div>
+
+  </div>
+
+  
+        <div style="display: inline;"><img id="ivw_pixel_intern" src="https://www.heise.de/ivw-bin/ivw/CP/developer/artikel/Barrierefreiheit-Stolpersteine-bei-mobilen-Anwendungen-ueberwinden-Teil-2-4500303.html" width="1" height="1" alt=""></div>
+
+        
+
+        
+        
+
+        
+    
+    
+    
+
+<a-analytics type="pingdom">
+  
+</a-analytics>
+
+
+  <ul id="navi_bottom" class="nav navbar-nav"><li role="presentation" class="left"><a href="https://www.heise.de/Datenschutzerklaerung-der-Heise-Medien-GmbH-Co-KG-4860.html">Datenschutzhinweis</a> </li><li role="presentation" class="left"><a href="https://www.heise.de/developer/impressum.html">Impressum</a></li><li role="presentation" class="left"><a href="https://www.heise.de/developer/kontakt/">Kontakt</a></li><li role="presentation" class="left"><a href="https://www.heise.de/mediadaten/online/">Mediadaten</a> </li>
+            <li role="presentation" class="bid_anzeige">2733681</li>
+    <li role="presentation" class="right container_ho_footer_copyright"><a href="http://www.interred.de/" target="_blank">Content Management by <b>Inter<span class="tx_red interred_red">Red</span></b></a></li>
+        <li role="presentation" class="right container_ho_footer_copyright"><a href="https://www.heise-medien.de/">Copyright &#xA9; 2019 Heise Medien</a></li>
+</ul>
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  </body>
+</html>
+<!-- Created with InterRed V17.4.0, http://www.interred.de/, by InterRed GmbH -->
+<!-- BID: 2733681, iBID: 2737804, CID: 4500303, iCID: 4505978 -->
+<!-- Link: $(LB2733681:Linktext)$ $(LC4500303:Linktext)$ -->
+<!-- Generiert: 2019-08-27 10:17:50 -->
+
