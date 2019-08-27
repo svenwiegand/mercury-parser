@@ -44,19 +44,24 @@ export const WwwHeiseDeExtractor = {
   },
 
   next_page_url: {
-    selectors: [['footer a.seite_weiter', 'href']],
+    selectors: [
+      ['footer a.seite_weiter', 'href'],
+      ['footer a[rel="next"]', 'href'],
+    ],
   },
 
   content: {
-    selectors: ['.article-content', ['article > *:not(header)']],
+    selectors: ['.article-content', 'article'],
 
     // Is there anything in the content you selected that needs transformed
     // before it's consumable content? E.g., unusual lazy loaded images
-    transforms: {},
+    transforms: {
+      'aside h5': 'h2',
+    },
 
     // Is there anything that is in the result that shouldn't be?
     // The clean selectors will remove anything that matches from
     // the result
-    clean: ['nav'],
+    clean: ['nav', 'a-paid-content-teaser'],
   },
 };

@@ -355,7 +355,7 @@ describe('WwwHeiseDeExtractor', () => {
       // the article.
       assert.equal(
         first13,
-        'FIDO2 macht endlich den Traum vom sicheren, aber passwortlosen Anmelden wahr. Im Normalfall'
+        'Es ist keine Zukunftsmusik, sondern bereits ganz real möglich, sich sicher und komplett'
       );
     });
   });
