@@ -133,3 +133,4 @@ export * from './pitchfork.com';
 export * from './biorxiv.org';
 export * from './www.heise.de';
 export * from './thesweetsetup.com';
+export * from './epaper.zeit.de';
