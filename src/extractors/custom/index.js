@@ -132,3 +132,4 @@ export * from './www.phoronix.com';
 export * from './pitchfork.com';
 export * from './biorxiv.org';
 export * from './www.heise.de';
+export * from './epaper.zeit.de';
