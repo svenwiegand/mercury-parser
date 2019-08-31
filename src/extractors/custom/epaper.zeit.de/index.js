@@ -32,6 +32,6 @@ export const EpaperZeitDeExtractor = {
     // Is there anything that is in the result that shouldn't be?
     // The clean selectors will remove anything that matches from
     // the result
-    clean: ['image-credits', 'box[type=citation]'],
+    clean: ['image-credits', 'box[type=citation]', 'intertitle'],
   },
 };

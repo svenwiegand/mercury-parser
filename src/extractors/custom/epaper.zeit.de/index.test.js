@@ -14,7 +14,7 @@ describe('EpaperZeitDeExtractor', () => {
     let url;
     beforeAll(() => {
       url =
-        'https://epaper.zeit.de/article/702225a4061dfbf97ab93df8de77e8c54aa3f5fe7a8c2799e8d425953d123acf';
+        'https://epaper.zeit.de/article/bf397a9d07bfaf9d17b4939773dfc96b8f39585143ca74fb5ea035dfccff22a9';
       const html = fs.readFileSync(
         './fixtures/epaper.zeit.de/1566927390034.html'
       );
@@ -36,7 +36,7 @@ describe('EpaperZeitDeExtractor', () => {
 
       // Update these values with the expected values from
       // the article.
-      assert.equal(title, `Was heißt Sozialismus für Sie, Kevin Kühnert?`);
+      assert.equal(title, `Lässt sich ein No Deal noch verhindern?`);
     });
 
     it('returns the author', async () => {
@@ -46,7 +46,7 @@ describe('EpaperZeitDeExtractor', () => {
 
       // Update these values with the expected values from
       // the article.
-      assert.equal(author, 'Politik · Jochen Bittner, Tina Hildebrandt');
+      assert.equal(author, 'Politik · Jan Roß');
     });
 
     it('returns the date_published', async () => {
@@ -68,7 +68,7 @@ describe('EpaperZeitDeExtractor', () => {
       // the article.
       assert.equal(
         excerpt,
-        'Zum Beispiel die Kollektivierung von Firmen wie BMW, sagt der Chef der Jusos. In der Wirtschaftsordnung, die er sich vorstellt, gäbe es auch kein Eigentum an Wohnraum mehr. Ein Gespräch über eine radikale Alternative'
+        'Großbritannien steht kurz vor einem chaotischen EU-Ausstieg. Dabei gibt es noch\n                            allerletzte Möglichkeiten'
       );
     });
 
@@ -102,8 +102,14 @@ describe('EpaperZeitDeExtractor', () => {
       // the article.
       assert.equal(
         first13,
-        'Politik · Jochen Bittner, Tina Hildebrandt Zum Beispiel die Kollektivierung von Firmen wie'
+        'Politik · Jan Roß Großbritannien steht kurz vor einem chaotischen EU-Ausstieg. Dabei gibt'
       );
+    });
+    it('removes intertitles', async () => {
+      const { content } = await result;
+      const $ = cheerio.load(content || '');
+      const intertitles = $('intertitle').text();
+      assert.equal(intertitles, '');
     });
   });
 });
